@@ -31,10 +31,11 @@ def check_mac(mac_addr):
             file.write("--There is a spoofed Mac on the network-- ")
 
     else:
-        filename = "LOG " + str(now) + ".txt"
+        filename = "LOG - " + str(now) + ".txt"
         file = open(filename, 'w')
 
         file.write("LOG INFO: \n")
+        file.write("--------- \n")
         file.write("ARP TABLE : \n")
         file.write(str(ip_addr) + "\n")
         file.write(str(mac_addr) + "\n")
