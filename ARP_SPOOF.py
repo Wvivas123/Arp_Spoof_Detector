@@ -23,22 +23,22 @@ def check_mac(mac_addr):
             print("There Is a spoofed Mac")
             filename = "LOG " + str(now) + ".txt"
             file = open(filename, 'w')
+            file.write("LOG INFO: \n")
+            file.write("ARP TABLE : \n")
+            file.write(str(ip_addr) + "\n")
+            file.write(str(mac_addr) + "\n")
+            file.write("[+]---OUTPUT---[+] \n")
+            file.write("--There is a spoofed Mac on the network-- ")
 
-            file.write("LOG INFO:")
-            file.write("ARP TABLE :")
-            file.write(str(ip_addr))
-            file.write(str(mac_addr))
-            file.write("[+]---OUTPUT---[+]")
-            file.write("-- Spoofed Mac Address on Network --")
     else:
         filename = "LOG " + str(now) + ".txt"
         file = open(filename, 'w')
 
-        file.write("LOG INFO:")
-        file.write("ARP TABLE :")
-        file.write(str(ip_addr))
-        file.write(str(mac_addr))
-        file.write("[+]---OUTPUT---[+]")
+        file.write("LOG INFO: \n")
+        file.write("ARP TABLE : \n")
+        file.write(str(ip_addr) + "\n")
+        file.write(str(mac_addr) + "\n")
+        file.write("[+]---OUTPUT---[+] \n")
         file.write("--No Duplicate Macs on Network-- ")
 
 
